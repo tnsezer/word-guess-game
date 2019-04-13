@@ -2,13 +2,13 @@
 
 The game created for showing pattern and design with test.
 
-How can you test:
+## How can you test:
 run phpunit or  ./vendor/bin/simple-phpunit
 
-How can you play:
+## How can you play:
 run bin/console app:game-start
 
-What are the game rules:
+## What are the game rules:
 - you have 5 chance
 - Game pick random a word an you can only guess a word
 - If you guess correct, chance stay same
