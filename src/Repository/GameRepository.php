@@ -11,7 +11,7 @@ namespace App\Repository;
 
 use App\Model\WordModel;
 
-class GameRepository
+class GameRepository implements GameRepositoryInterface
 {
     private $chance = 5;
     private $wordModel;
@@ -67,7 +67,8 @@ class GameRepository
     private function getIndexes(string $word): array
     {
         $tempArr = [];
-        for($i=0;$i<$this->length();$i++){
+        $length = $this->length();
+        for($i=0;$i<$length;$i++){
             if ($word === $this->word{$i}) {
                 $tempArr[$i] = $word;
             }
@@ -78,8 +79,7 @@ class GameRepository
 
     public function getStatus(): \stdClass
     {
-        $result = [];
-        if (count($this->founded) === strlen($this->getWord())) {
+        if (count($this->founded) === $this->length()) {
             $result = [
                 'message' => 'You win',
                 'status' => 2
@@ -104,7 +104,8 @@ class GameRepository
     public function lastResult(): string
     {
         $string = '';
-        for($i=0;$i<strlen($this->getWord());$i++) {
+        $length = $this->length();
+        for($i=0;$i<$length;$i++) {
             if (array_key_exists($i, $this->founded)) {
                 $string .= $this->founded[$i];
                 continue;
