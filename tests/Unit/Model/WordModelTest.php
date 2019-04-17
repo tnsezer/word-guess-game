@@ -6,7 +6,7 @@
  * Time: 19:49
  */
 
-namespace App\Tests\Model;
+namespace App\Tests\Unit\Model;
 
 use App\Model\WordModel;
 

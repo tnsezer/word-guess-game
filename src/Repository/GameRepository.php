@@ -11,9 +11,9 @@ namespace App\Repository;
 
 use App\Model\WordModel;
 
-class GameRepository
+class GameRepository implements GameRepositoryInterface
 {
-    private $chance = 5;
+    private $chance;
     private $wordModel;
     private $word;
     private $choosed = [];

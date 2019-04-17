@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace App\Model;
 
-class WordModel
+class WordModel implements WordModelInterface
 {
     private $words = [];
 

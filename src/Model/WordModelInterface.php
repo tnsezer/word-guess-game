@@ -11,5 +11,5 @@ namespace App\Model;
 
 interface WordModelInterface
 {
-
+    public function pickWord(): string;
 }

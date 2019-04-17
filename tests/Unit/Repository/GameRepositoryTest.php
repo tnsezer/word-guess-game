@@ -6,7 +6,7 @@
  * Time: 22:30
  */
 
-namespace App\Tests\Repository;
+namespace App\Tests\Unit\Repository;
 
 use App\Model\WordModel;
 use App\Repository\GameRepository;
