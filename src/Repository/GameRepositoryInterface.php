@@ -8,7 +8,6 @@
 
 namespace App\Repository;
 
-
 interface GameRepositoryInterface
 {
     public function getChance(): int;
