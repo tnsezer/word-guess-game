@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace App\Repository;
 
-use App\Model\WordModel;
+use App\Model\WordModelInterface;
 
 class GameRepository implements GameRepositoryInterface
 {
@@ -19,7 +19,7 @@ class GameRepository implements GameRepositoryInterface
     private $choosed = [];
     private $founded = [];
 
-    public function __construct(WordModel $wordModel, int $chance = 11)
+    public function __construct(WordModelInterface $wordModel, int $chance = 11)
     {
         $this->wordModel = $wordModel;
         $this->word = $this->wordModel->pickWord();
